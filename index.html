@@ -249,6 +249,10 @@
             color: var(--color-text-secondary);
             margin-bottom: var(--spacing-md);
             max-width: 500px;
+            text-align: justify;
+            /* Consistent block look */
+            text-justify: inter-ideograph;
+            /* Better for Japanese */
         }
 
         .hero__avatar {
@@ -434,8 +438,19 @@
 
         .about__text {
             color: var(--color-text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.9;
+            font-size: 1.05rem;
+            line-height: 2;
+            /* Relaxed leading */
+            text-align: left;
+            /* Left align for readability */
+            max-width: 600px;
+            /* Limit width */
+            margin: 0 auto;
+            /* Center the block */
+        }
+
+        .about__text p {
+            margin-bottom: var(--spacing-sm);
         }
 
         /* ═══════════════════════════════════════════════════════ */
@@ -512,8 +527,7 @@
                         物語を灯す。
                     </h1>
                     <p class="hero__subtitle">
-                        AIを活用したオリジナル漫画制作。<br>
-                        心に寄り添う、静かな時間をお届けします。
+                        AIを活用したオリジナル漫画制作。心に寄り添う、静かな時間をお届けします。
                     </p>
                     <a href="#works" class="hero__cta">
                         <span>作品一覧</span>
@@ -561,12 +575,16 @@
         <section id="about" class="about" aria-labelledby="about-heading">
             <div class="about__container container">
                 <h2 id="about-heading" class="about__title">About</h2>
-                <p class="about__text">
-                    AIを活用して漫画を制作しているクリエイターです。<br>
-                    日常の悩みや感情、共感できるエピソードを漫画で表現しています。<br><br>
-                    「あるある」と思ってもらえるような、<br>
-                    心に寄り添う作品を目指しています。
-                </p>
+                <div class="about__text">
+                    <p>
+                        AIを活用して漫画を制作しているクリエイターです。
+                        日常の悩みや感情、共感できるエピソードを漫画で表現しています。
+                    </p>
+                    <p>
+                        「あるある」と思ってもらえるような、
+                        心に寄り添う作品を目指しています。
+                    </p>
+                </div>
             </div>
         </section>
 
