@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>限界サラリーマン ～トイレ我慢バトル～ | 尊厳を、守り抜け。</title>
-    
+    <title>AI漫画クリエイター ポートフォリオ</title>
+
     <!-- セキュリティヘッダー -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
@@ -16,56 +17,76 @@
         base-uri 'self';
     ">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
+
     <!-- SEO・OGP -->
-    <meta name="description" content="襲いかかる便意、迫り来る乗客。尊厳を守り抜け or 社会的な死。限界サラリーマンの壮絶なトイレバトルが今始まる！">
-    <meta property="og:title" content="限界サラリーマン ～トイレ我慢バトル～">
-    <meta property="og:description" content="尊厳を、守り抜け。襲いかかる便意 vs 迫り来る乗客">
+    <meta name="description" content="AI漫画クリエイターのポートフォリオサイト。オリジナル漫画作品を掲載しています。">
+    <meta property="og:title" content="AI漫画クリエイター ポートフォリオ">
+    <meta property="og:description" content="AI漫画クリエイターのポートフォリオサイト">
     <meta property="og:type" content="website">
-    
+
     <!-- フォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;900&display=swap"
+        rel="stylesheet">
+
     <style>
         /* ═══════════════════════════════════════════════════════ */
         /* CSS Variables */
         /* ═══════════════════════════════════════════════════════ */
         :root {
-            /* Colors - Dark + Neon */
-            --color-background: #0a0a0a;
-            --color-background-alt: #1a1a1a;
-            --color-background-card: #111111;
-            --color-text: #ffffff;
-            --color-text-secondary: #a0a0a0;
-            --color-accent: #CCFF00; /* Neon Yellow - 緊急感 */
-            --color-danger: #ff4444; /* 危機感の赤 */
-            --color-poop: #8B4513; /* 💩ブラウン */
-            --color-success: #00ff88;
-            
-            /* Typography */
+            /* Calm Japanese Modern Palette */
+            --color-background: #fbfaf5;
+            /* Washi-like off-white */
+            --color-background-alt: #ffffff;
+            --color-text: #2b2b2b;
+            /* Sumi ink dark */
+            --color-text-secondary: #595857;
+
+            /* Accents */
+            --color-accent: #8e354a;
+            /* Traditional Red (Enji) */
+            --color-accent-light: #c76a77;
+            --color-primary: #3a5b52;
+            /* Pine/Matcha Green */
+            --color-primary-light: #6d8c83;
+
+            /* Fonts */
             --font-body: 'Noto Sans JP', sans-serif;
+            --font-heading: 'Noto Serif JP', serif;
+
             --font-size-base: 16px;
-            --line-height-body: 1.7;
-            
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-            
-            /* Layout */
-            --max-width: 1200px;
-            --border-radius: 12px;
-            --transition: 0.3s ease;
+            --line-height-body: 1.8;
+            /* Slightly looser for elegance */
+            --line-height-heading: 1.4;
+
+            /* Spacing - "Ma" (Negative Space) */
+            --spacing-xs: 0.75rem;
+            --spacing-sm: 1.5rem;
+            --spacing-md: 3rem;
+            --spacing-lg: 5rem;
+            --spacing-xl: 8rem;
+
+            --max-width: 1080px;
+            /* Slightly narrower for focus */
+            --border-radius: 4px;
+            /* Sharper, more traditional corners */
+            --border-radius-lg: 8px;
+
+            /* Subtle Shadows */
+            --shadow: 0 4px 20px rgba(40, 40, 40, 0.06);
+            --shadow-hover: 0 8px 30px rgba(40, 40, 40, 0.12);
+            --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            /* Elegant ease */
         }
 
         /* ═══════════════════════════════════════════════════════ */
         /* CSS Reset */
         /* ═══════════════════════════════════════════════════════ */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -82,7 +103,8 @@
             background-color: var(--color-background);
             line-height: var(--line-height-body);
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            /* Global paper texture */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
         }
 
         img {
@@ -108,7 +130,7 @@
             top: -50px;
             left: 0;
             background: var(--color-accent);
-            color: #000;
+            color: #fff;
             padding: var(--spacing-sm);
             z-index: 1000;
             transition: top var(--transition);
@@ -120,53 +142,12 @@
         }
 
         /* ═══════════════════════════════════════════════════════ */
-        /* Utility Classes */
+        /* Layout */
         /* ═══════════════════════════════════════════════════════ */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 var(--spacing-md);
-        }
-
-        /* ═══════════════════════════════════════════════════════ */
-        /* Special Effects */
-        /* ═══════════════════════════════════════════════════════ */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        @keyframes urgentPulse {
-            0%, 100% { box-shadow: 0 0 20px var(--color-danger); }
-            50% { box-shadow: 0 0 40px var(--color-danger), 0 0 60px var(--color-danger); }
-        }
-
-        @keyframes speedLines {
-            0% { transform: translateX(-100%); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateX(100%); opacity: 0; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .animate-on-scroll.animate-in {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* ═══════════════════════════════════════════════════════ */
@@ -179,9 +160,10 @@
             right: 0;
             z-index: 100;
             padding: var(--spacing-sm) 0;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(251, 250, 245, 0.95);
+            /* Match bg color */
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             transition: all var(--transition);
         }
 
@@ -192,510 +174,268 @@
         }
 
         .header__logo {
+            font-family: var(--font-heading);
             font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--color-accent);
-            letter-spacing: -0.02em;
-        }
-
-        .header__logo-emoji {
-            margin-right: 0.3em;
-        }
-
-        .header__cta {
-            background: var(--color-accent);
-            color: #000;
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
             font-weight: 700;
-            font-size: 0.9rem;
-            transition: all var(--transition);
+            color: var(--color-text);
+            letter-spacing: 0.05em;
         }
 
-        .header__cta:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px var(--color-accent);
+        .header__nav {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .header__nav-link {
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .header__nav-link:hover {
+            color: var(--color-accent);
         }
 
         /* ═══════════════════════════════════════════════════════ */
-        /* Hero Section */
+        /* Hero / Profile Section */
+        /* ═══════════════════════════════════════════════════════ */
+        /* ═══════════════════════════════════════════════════════ */
+        /* Hero / Profile Section */
         /* ═══════════════════════════════════════════════════════ */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: calc(var(--spacing-xl) + 60px) var(--spacing-md) var(--spacing-xl);
+            background: var(--color-background);
             position: relative;
-            padding: var(--spacing-xl) 0;
             overflow: hidden;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-        }
-
-        /* Speed lines background */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 50px,
-                rgba(204, 255, 0, 0.03) 50px,
-                rgba(204, 255, 0, 0.03) 51px
-            );
-            animation: speedLines 3s linear infinite;
-            pointer-events: none;
+            /* Subtle texture overlay */
+            background-image: radial-gradient(var(--color-text-secondary) 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.95;
         }
 
         .hero__container {
-            text-align: center;
-            position: relative;
-            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--spacing-lg);
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .hero__badge {
-            display: inline-block;
-            background: var(--color-danger);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-bottom: var(--spacing-md);
-            animation: shake 0.5s ease-in-out infinite;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+        .hero__content-group {
+            text-align: left;
         }
 
         .hero__title {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.03em;
-        }
-
-        .hero__title-highlight {
-            color: var(--color-accent);
-            display: block;
-            font-style: italic;
-            transform: skewX(-5deg);
-            display: inline-block;
-        }
-
-        .hero__subtitle {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--color-text-secondary);
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 500;
+            color: var(--color-text);
             margin-bottom: var(--spacing-md);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero__tagline {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 900;
-            color: var(--color-accent);
-            margin-bottom: var(--spacing-lg);
-            text-shadow: 0 0 30px var(--color-accent);
-        }
-
-        .hero__cta-group {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
-            align-items: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all var(--transition);
-            border: none;
-            text-transform: uppercase;
+            line-height: 1.3;
             letter-spacing: 0.05em;
         }
 
-        .btn--primary {
-            background: var(--color-accent);
-            color: #000;
-            animation: pulse 2s ease-in-out infinite;
-        }
+        /* Vertical writing for "Japanese" impact if desired, 
+           but horizontal is safer for mixed content. 
+           Let's stick to horizontal but elegant for now. */
 
-        .btn--primary:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 40px var(--color-accent);
-            animation: none;
-        }
-
-        .btn--secondary {
-            background: transparent;
-            color: var(--color-text);
-            border: 2px solid var(--color-text);
-        }
-
-        .btn--secondary:hover {
-            background: var(--color-text);
-            color: var(--color-background);
-        }
-
-        .btn__emoji {
-            margin-right: 0.5em;
-            font-size: 1.3em;
-        }
-
-        /* ═══════════════════════════════════════════════════════ */
-        /* Gauge Section */
-        /* ═══════════════════════════════════════════════════════ */
-        .gauge {
-            padding: var(--spacing-lg) 0;
-            background: var(--color-background-alt);
-            border-top: 3px solid var(--color-danger);
-            border-bottom: 3px solid var(--color-danger);
-        }
-
-        .gauge__container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-md);
-        }
-
-        .gauge__item {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .gauge__item:last-child {
-            margin-bottom: 0;
-        }
-
-        .gauge__label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: var(--spacing-xs);
-            font-weight: 700;
-        }
-
-        .gauge__label-text {
-            color: var(--color-text);
-        }
-
-        .gauge__label-value {
-            color: var(--color-danger);
-            font-size: 1.2rem;
-        }
-
-        .gauge__bar {
-            height: 20px;
-            background: var(--color-background);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .gauge__fill {
-            height: 100%;
-            border-radius: 10px;
-            transition: width 1s ease-out;
-            position: relative;
-        }
-
-        .gauge__fill--danger {
-            background: linear-gradient(90deg, #ff4444, #ff0000);
-            animation: urgentPulse 1s ease-in-out infinite;
-        }
-
-        .gauge__fill--warning {
-            background: linear-gradient(90deg, #ffaa00, #ff6600);
-        }
-
-        /* ═══════════════════════════════════════════════════════ */
-        /* Concept Section */
-        /* ═══════════════════════════════════════════════════════ */
-        .concept {
-            padding: var(--spacing-xl) 0;
-            background: var(--color-background);
-        }
-
-        .concept__title {
-            font-size: clamp(1.8rem, 5vw, 3rem);
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-            font-weight: 900;
-        }
-
-        .concept__title-emoji {
-            display: block;
-            font-size: 3rem;
-            margin-bottom: var(--spacing-sm);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .concept__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-md);
-        }
-
-        .concept__card {
-            background: var(--color-background-card);
-            border-radius: var(--border-radius);
-            padding: var(--spacing-md);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .concept__card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-danger));
-        }
-
-        .concept__card:hover {
-            transform: translateY(-5px);
-            border-color: var(--color-accent);
-            box-shadow: 0 10px 40px rgba(204, 255, 0, 0.1);
-        }
-
-        .concept__card-emoji {
-            font-size: 3rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .concept__card-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-            color: var(--color-accent);
-        }
-
-        .concept__card-text {
+        .hero__subtitle {
+            font-size: 1.1rem;
             color: var(--color-text-secondary);
-            font-size: 0.95rem;
+            margin-bottom: var(--spacing-md);
+            max-width: 500px;
         }
 
-        /* ═══════════════════════════════════════════════════════ */
-        /* Gameplay Section */
-        /* ═══════════════════════════════════════════════════════ */
-        .gameplay {
-            padding: var(--spacing-xl) 0;
-            background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-alt) 100%);
+        .hero__avatar {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            /* Circle is classic */
+            object-fit: cover;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
 
-        .gameplay__title {
-            font-size: clamp(1.8rem, 5vw, 3rem);
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-            font-weight: 900;
-        }
-
-        .gameplay__content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--spacing-lg);
+        .hero__cta {
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
+            gap: var(--spacing-xs);
+            background: var(--color-accent);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            transition: all var(--transition);
         }
 
-        @media (min-width: 768px) {
-            .gameplay__content {
-                grid-template-columns: 1fr 1fr;
+        .hero__cta:hover {
+            transform: translateY(-2px);
+            background: var(--color-accent-light);
+            box-shadow: var(--shadow-hover);
+        }
+
+        @media (max-width: 768px) {
+            .hero__container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+                gap: var(--spacing-md);
+            }
+
+            .hero__content-group {
+                text-align: center;
+                order: 2;
+            }
+
+            .hero__avatar {
+                order: 1;
+                width: 180px;
+                height: 180px;
             }
         }
 
-        .gameplay__image-wrapper {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 3px solid var(--color-accent);
+        /* ═══════════════════════════════════════════════════════ */
+        /* Works Section */
+        /* ═══════════════════════════════════════════════════════ */
+        .works {
+            padding: var(--spacing-xl) 0;
+            background: var(--color-background-alt);
         }
 
-        .gameplay__image {
+        .works__title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            color: var(--color-text);
+        }
+
+        .works__title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--color-accent);
+            margin: var(--spacing-sm) auto 0;
+            border-radius: 0;
+        }
+
+        .works__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .work-card {
+            background: var(--color-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: none;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all var(--transition);
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .work-card__image {
             width: 100%;
             display: block;
+            aspect-ratio: 4/3;
+            /* Traditional photo ratio */
+            object-fit: cover;
+            filter: sepia(10%);
+            /* Subtle antique feel */
+            transition: filter var(--transition);
         }
 
-        .gameplay__image-badge {
-            position: absolute;
-            top: var(--spacing-sm);
-            left: var(--spacing-sm);
-            background: var(--color-danger);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            animation: pulse 1.5s ease-in-out infinite;
+        .work-card:hover .work-card__image {
+            filter: sepia(0%);
         }
 
-        .gameplay__info {
-            padding: var(--spacing-md) 0;
+        .work-card__content {
+            padding: var(--spacing-sm);
         }
 
-        .gameplay__subtitle {
-            color: var(--color-accent);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .gameplay__headline {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 900;
-            margin-bottom: var(--spacing-md);
-            line-height: 1.2;
-        }
-
-        .gameplay__text {
-            color: var(--color-text-secondary);
-            margin-bottom: var(--spacing-md);
+        .work-card__title {
+            font-family: var(--font-heading);
             font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-text);
         }
 
-        .gameplay__features {
-            list-style: none;
-        }
-
-        .gameplay__feature {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
+        .work-card__description {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
             margin-bottom: var(--spacing-sm);
-            font-size: 1rem;
         }
 
-        .gameplay__feature-icon {
-            font-size: 1.5rem;
+        .work-card__tag {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
         /* ═══════════════════════════════════════════════════════ */
-        /* Outcome Section */
+        /* About Section */
         /* ═══════════════════════════════════════════════════════ */
-        .outcome {
+        .about {
             padding: var(--spacing-xl) 0;
             background: var(--color-background);
+            /* Consistent background */
         }
 
-        .outcome__title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-            font-weight: 900;
-        }
-
-        .outcome__grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-md);
-            max-width: 800px;
+        .about__container {
+            max-width: 700px;
             margin: 0 auto;
-        }
-
-        .outcome__card {
+            text-align: center;
             padding: var(--spacing-lg);
-            border-radius: var(--border-radius);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            /* Paper-like border */
+            background: var(--color-background-alt);
         }
 
-        .outcome__card--success {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 255, 136, 0.05));
-            border: 2px solid var(--color-success);
-        }
-
-        .outcome__card--fail {
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(139, 69, 19, 0.1));
-            border: 2px solid var(--color-poop);
-        }
-
-        .outcome__emoji {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .outcome__card-title {
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .outcome__card--success .outcome__card-title {
-            color: var(--color-success);
-        }
-
-        .outcome__card--fail .outcome__card-title {
-            color: var(--color-danger);
-        }
-
-        .outcome__card-text {
-            color: var(--color-text-secondary);
-        }
-
-        /* ═══════════════════════════════════════════════════════ */
-        /* CTA Section */
-        /* ═══════════════════════════════════════════════════════ */
-        .cta {
-            padding: var(--spacing-xl) 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '💩';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.05;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-        }
-
-        .cta__container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta__emoji {
-            font-size: 4rem;
+        .about__title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 500;
             margin-bottom: var(--spacing-md);
-            animation: shake 0.5s ease-in-out infinite;
         }
 
-        .cta__title {
-            font-size: clamp(2rem, 6vw, 4rem);
-            font-weight: 900;
-            margin-bottom: var(--spacing-sm);
+        .about__title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: var(--color-primary);
+            /* Use primary color here */
+            margin: var(--spacing-sm) auto 0;
         }
 
-        .cta__subtitle {
-            font-size: 1.2rem;
+        .about__text {
             color: var(--color-text-secondary);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .cta__button {
-            font-size: 1.3rem;
-            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
         }
 
         /* ═══════════════════════════════════════════════════════ */
@@ -703,232 +443,148 @@
         /* ═══════════════════════════════════════════════════════ */
         .footer {
             padding: var(--spacing-md) 0;
-            background: var(--color-background);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--color-text);
+            /* Dark sumi ink */
+            color: rgba(255, 255, 255, 0.8);
             text-align: center;
+            font-family: var(--font-heading);
+            letter-spacing: 0.1em;
         }
 
         .footer__text {
-            color: var(--color-text-secondary);
             font-size: 0.9rem;
+        }
+
+        /* ═══════════════════════════════════════════════════════ */
+        /* Animations */
+        /* ═══════════════════════════════════════════════════════ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .animate-on-scroll.animate-in {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* ═══════════════════════════════════════════════════════ */
         /* Responsive */
         /* ═══════════════════════════════════════════════════════ */
         @media (max-width: 767px) {
-            .outcome__grid {
+            .works__grid {
                 grid-template-columns: 1fr;
             }
 
-            .hero {
-                padding-top: calc(var(--spacing-xl) + 60px);
+            .header__nav {
+                display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Skip Link -->
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-    
+
     <!-- Header -->
     <header class="header">
         <div class="header__container container">
-            <a href="#" class="header__logo">
-                <span class="header__logo-emoji">🚽</span>限界サラリーマン
-            </a>
-            <a href="https://claude.ai/public/artifacts/ffbc4bc0-10df-40f5-8f87-ca5211c96c0e" class="header__cta" target="_blank" rel="noopener noreferrer">今すぐプレイ</a>
+            <a href="#" class="header__logo">AI漫画クリエイター</a>
+            <nav class="header__nav" aria-label="メインナビゲーション">
+                <a href="#works" class="header__nav-link">作品</a>
+                <a href="#about" class="header__nav-link">About</a>
+            </nav>
         </div>
     </header>
-    
+
     <!-- Main Content -->
     <main id="main-content">
-        
+
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
             <div class="hero__container container">
-                <span class="hero__badge">⚠️ 緊急事態発生</span>
-                <h1 id="hero-heading" class="hero__title">
-                    限界サラリーマン<br>
-                    <span class="hero__title-highlight">～トイレ我慢バトル～</span>
-                </h1>
-                <p class="hero__subtitle">
-                    襲いかかる便意。迫り来る乗客。<br>
-                    急いでトイレに向かいたいのに、邪魔者だらけ。<br>
-                    果たして間に合うのか…!?
-                </p>
-                <p class="hero__tagline">「尊厳を、守り抜け。」</p>
-                <div class="hero__cta-group">
-                    <a href="https://claude.ai/public/artifacts/ffbc4bc0-10df-40f5-8f87-ca5211c96c0e" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
-                        <span class="btn__emoji">🎮</span>ゲームスタート
+                <div class="hero__content-group">
+                    <h1 id="hero-heading" class="hero__title">
+                        日常に、<br>
+                        物語を灯す。
+                    </h1>
+                    <p class="hero__subtitle">
+                        AIを活用したオリジナル漫画制作。<br>
+                        心に寄り添う、静かな時間をお届けします。
+                    </p>
+                    <a href="#works" class="hero__cta">
+                        <span>作品一覧</span>
                     </a>
-                    <a href="#concept" class="btn btn--secondary">詳しく見る</a>
                 </div>
+                <img src="author-icon.png" alt="著者アイコン" class="hero__avatar">
             </div>
         </section>
-        
-        <!-- Gauge Section -->
-        <section class="gauge" aria-labelledby="gauge-heading">
-            <div class="gauge__container">
-                <h2 id="gauge-heading" class="visually-hidden">ステータス</h2>
-                <div class="gauge__item">
-                    <div class="gauge__label">
-                        <span class="gauge__label-text">💀 膀胱限界度</span>
-                        <span class="gauge__label-value">98%</span>
-                    </div>
-                    <div class="gauge__bar">
-                        <div class="gauge__fill gauge__fill--danger" style="width: 98%;"></div>
-                    </div>
-                </div>
-                <div class="gauge__item">
-                    <div class="gauge__label">
-                        <span class="gauge__label-text">😰 我慢限界</span>
-                        <span class="gauge__label-value">残り 0%</span>
-                    </div>
-                    <div class="gauge__bar">
-                        <div class="gauge__fill gauge__fill--warning" style="width: 5%;"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Concept Section -->
-        <section id="concept" class="concept" aria-labelledby="concept-heading">
+
+        <!-- Works Section -->
+        <section id="works" class="works" aria-labelledby="works-heading">
             <div class="container">
-                <h2 id="concept-heading" class="concept__title">
-                    <span class="concept__title-emoji">💩</span>
-                    これは、尊厳をかけた戦い
-                </h2>
-                <div class="concept__grid">
-                    <article class="concept__card animate-on-scroll">
-                        <div class="concept__card-emoji">🔥</div>
-                        <h3 class="concept__card-title">襲いかかる便意</h3>
-                        <p class="concept__card-text">
-                            容赦なく迫り来る生理現象。<br>
-                            タイムリミットは待ってくれない。
-                        </p>
+                <h2 id="works-heading" class="works__title">作品</h2>
+                <div class="works__grid">
+
+                    <article class="work-card animate-on-scroll">
+                        <img src="work-01.png" alt="漫画: あなたの強みは何ですか？自分の強みがわからない悩みを描いた作品" class="work-card__image">
+                        <div class="work-card__content">
+                            <h3 class="work-card__title">わたしの強みって…何!?</h3>
+                            <p class="work-card__description">
+                                「あなたの強みは何ですか？」<br>
+                                面接でよく聞かれるこの質問に悩む姿を描きました。
+                            </p>
+                            <span class="work-card__tag">4コマ漫画</span>
+                        </div>
                     </article>
-                    <article class="concept__card animate-on-scroll">
-                        <div class="concept__card-emoji">🚶‍♂️</div>
-                        <h3 class="concept__card-title">邪魔する乗客たち</h3>
-                        <p class="concept__card-text">
-                            なぜこんな時に限って混んでる？<br>
-                            避けて、かわして、突き進め。
-                        </p>
+
+                    <article class="work-card animate-on-scroll">
+                        <img src="work-02.png" alt="漫画: ここからはじめてみよう。新しい一歩を踏み出す希望の物語" class="work-card__image">
+                        <div class="work-card__content">
+                            <h3 class="work-card__title">ここからまたはじめてみよう</h3>
+                            <p class="work-card__description">
+                                「私だって腐ってない」「まだ間に合う」<br>
+                                新しい一歩を踏み出す勇気を描いた作品。
+                            </p>
+                            <span class="work-card__tag">エピソード漫画</span>
+                        </div>
                     </article>
-                    <article class="concept__card animate-on-scroll">
-                        <div class="concept__card-emoji">🚽</div>
-                        <h3 class="concept__card-title">目指すはトイレ</h3>
-                        <p class="concept__card-text">
-                            あと何メートル…!?<br>
-                            安息の地は、すぐそこだ。
-                        </p>
-                    </article>
+
                 </div>
             </div>
         </section>
-        
-        <!-- Gameplay Section -->
-        <section class="gameplay" aria-labelledby="gameplay-heading">
-            <div class="container">
-                <h2 id="gameplay-heading" class="gameplay__title">
-                    🎮 ゲームプレイ
-                </h2>
-                <div class="gameplay__content">
-                    <div class="gameplay__image-wrapper animate-on-scroll">
-                        <span class="gameplay__image-badge">GAME OVER</span>
-                        <img 
-                            src="game-screenshot.jpg" 
-                            alt="ゲーム画面: 社会的な死を迎えたサラリーマン。残り62m地点で決壊。" 
-                            class="gameplay__image"
-                        >
-                    </div>
-                    <div class="gameplay__info animate-on-scroll">
-                        <p class="gameplay__subtitle">待ち受けるは…</p>
-                        <h3 class="gameplay__headline">
-                            安息か、<br>
-                            <span style="color: var(--color-danger);">社会的な死か。</span>
-                        </h3>
-                        <p class="gameplay__text">
-                            シンプル操作で緊迫のサバイバル。<br>
-                            乗客をかわしながらトイレを目指せ！
-                        </p>
-                        <ul class="gameplay__features">
-                            <li class="gameplay__feature">
-                                <span class="gameplay__feature-icon">⏱️</span>
-                                <span>膀胱限界度との戦い</span>
-                            </li>
-                            <li class="gameplay__feature">
-                                <span class="gameplay__feature-icon">🏃</span>
-                                <span>迫り来る乗客を回避</span>
-                            </li>
-                            <li class="gameplay__feature">
-                                <span class="gameplay__feature-icon">📍</span>
-                                <span>残り距離との緊迫感</span>
-                            </li>
-                            <li class="gameplay__feature">
-                                <span class="gameplay__feature-icon">😱</span>
-                                <span>失敗すれば…社会的な死</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Outcome Section -->
-        <section class="outcome" aria-labelledby="outcome-heading">
-            <div class="container">
-                <h2 id="outcome-heading" class="outcome__title">
-                    運命は二つに一つ
-                </h2>
-                <div class="outcome__grid">
-                    <article class="outcome__card outcome__card--success animate-on-scroll">
-                        <div class="outcome__emoji">🚽✨</div>
-                        <h3 class="outcome__card-title">CLEAR</h3>
-                        <p class="outcome__card-text">尊厳は守られた…！</p>
-                    </article>
-                    <article class="outcome__card outcome__card--fail animate-on-scroll">
-                        <div class="outcome__emoji">💩😱</div>
-                        <h3 class="outcome__card-title">社会的な死</h3>
-                        <p class="outcome__card-text">尊厳は失われた…</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- CTA Section -->
-        <section id="play" class="cta" aria-labelledby="cta-heading">
-            <div class="cta__container container">
-                <div class="cta__emoji">🚽💨</div>
-                <h2 id="cta-heading" class="cta__title">今すぐ挑戦！</h2>
-                <p class="cta__subtitle">君は尊厳を守り抜けるか!?</p>
-                <a href="https://claude.ai/public/artifacts/ffbc4bc0-10df-40f5-8f87-ca5211c96c0e" class="btn btn--primary cta__button" target="_blank" rel="noopener noreferrer">
-                    <span class="btn__emoji">🎮</span>ゲームスタート
-                </a>
-                <p style="margin-top: var(--spacing-md); color: var(--color-text-secondary); font-size: 0.9rem;">
-                    ※ ブラウザでプレイできます
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <div class="about__container container">
+                <h2 id="about-heading" class="about__title">About</h2>
+                <p class="about__text">
+                    AIを活用して漫画を制作しているクリエイターです。<br>
+                    日常の悩みや感情、共感できるエピソードを漫画で表現しています。<br><br>
+                    「あるある」と思ってもらえるような、<br>
+                    心に寄り添う作品を目指しています。
                 </p>
             </div>
         </section>
-        
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer__text">
-                © 2025 限界サラリーマン ～トイレ我慢バトル～ | 尊厳を、守り抜け。
-            </p>
+            <p class="footer__text">© 2025 AI漫画クリエイター. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script>
         'use strict';
 
-        document.addEventListener('DOMContentLoaded', function() {
-            
+        document.addEventListener('DOMContentLoaded', function () {
+
             // Scroll Animation
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -938,28 +594,13 @@
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             document.querySelectorAll('.animate-on-scroll').forEach(el => {
                 observer.observe(el);
             });
-            
-            // Header scroll effect
-            const header = document.querySelector('.header');
-            if (header) {
-                window.addEventListener('scroll', () => {
-                    header.classList.toggle('header--scrolled', window.scrollY > 100);
-                });
-            }
-            
-            // Gauge animation on load
-            setTimeout(() => {
-                const gauges = document.querySelectorAll('.gauge__fill');
-                gauges.forEach(gauge => {
-                    gauge.style.transition = 'width 1.5s ease-out';
-                });
-            }, 500);
-            
+
         });
     </script>
 </body>
+
 </html>
